@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换</title>
+    <script>
+    //其他类型转化为字符串型
+    //1.方式toString()转成字符串
+    var num = 10;
+    var str = num.toString();
+    console.log(str);
+    console.log(typeof str);
+
+    //2.String(变量)强制转换
+    console.log(String(num));
+    //3.加号拼接字符串也叫隐式转换
+    console.log(num + '');
+    
+
+    
+
+    //其他类型转化为数字型
+  //1.paresInt(string)函数 将string类型转换成整数值型
+  var age = prompt('请输入你的年龄');
+  console.log(parseInt(age));
+  console.log(parseInt('3.14'));//3 取整
+  console.log(parseInt('3.99'));//3 取整 
+  console.log(parseInt('120px'));//120 帮我们去除单位
+
+  //2. parseFloat(string)函数 将string类型转换成浮点数数值型
+  console.log(parseFloat('3.14'));//3.14
+  console.log(parseFloat('120px'));//120 帮我们去除单位
+  console.log(parseFloat('rem120px'));//NaN
+
+
+
+  //3.Number(变量)强制转换函数 将string类型转换为数值型
+  var str1 = '123';
+  console.log(Number(str1));
+  
+  //4.js隐式转换（- * /）  利用算数运算隐式转换为数值型
+  console.log('12' - 0);//返回数值型
+  console.log('123' - '120');//返回数值型
+  console.log('123' * '120');//返回数值型
+   //其他类型转化为布尔型
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

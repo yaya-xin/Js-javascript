@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+    <script>
+       /*字符串型可以是引号中的任意文本，其语法为双引号""和单引号''
+       因为HTML标签里面的属性使用的是双引号，js这里我们更推荐使用单引号
+       
+        //'pig'  'pig猪猪' '123'   'true'这些都是字符串类型。如果没有加引号会报错
+
+
+       字符串引用嵌套
+       js可以使用单引号嵌套双引号，或者用双引号嵌套单引号（外双内但，外单内双）
+       */
+       //var str = '小可爱'是'猪猪';js语法中会匹配最近的一个引号，因此 是 这个文字没有匹配到js语法所以会报错
+      var str = '小可爱是"猪猪"';
+      console.log(str);
+     
+     //如果要换行直接在字符串里面插入<br>标签是不可以的，要用到转义符
+     /*字符串转义符：转义符都是以\开头。这些专一字符要写到引号里面
+     \n  换行符 ，n是newline的意思
+     \\  斜杠\
+     \'  '单引号
+     \"  "双引号
+     \t  tab缩进
+     \b  空格,b是blank的意思
+
+     */
+      var str2 = '小可爱是\n"猪猪"';
+      console.log(str2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

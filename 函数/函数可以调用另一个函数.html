@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数调用另一个函数</title>
+    <script>
+    function fn1(){
+       console.log(11);
+       fn2(); //在fn1里面调用fn2
+    }
+    fn1();
+
+    function fn2(){
+        console.log(22);
+    }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

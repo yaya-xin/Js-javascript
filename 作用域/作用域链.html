@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域链</title>
+    <script>
+/*作用域链
+  只要是代码，就只要有一个作用域
+  写在函数内部的局部作用域
+  如果函数中海油函数，你们在这个作用域中就可以诞生一个作用域
+  根据在内部函数可以访问外部函数变量的这种机制，用链式查找决定哪些数据能被内部函数访问，就称作作用域链
+
+*/
+    var num = 10;//3.
+
+    function fn() { //2.外部函数
+       var num = 20; 
+
+        function fun(){ //1.内部函数
+           console.log(num); //就近原则,先查找内部num变量,内部num变量查找不到再查找外部，外部查找不到再找 最上面那层var num = 10 （查找顺序1.2.3）
+       }
+       fun();
+    }
+
+    fn();
+
+
+    //作用域链练习：看看输出结果是什么
+    function f1(){  //外层函数
+       var num = 123; 
+       
+       function f2(){ //内层函数没有num 去看外层函数，外层函数有num=123
+           console.log(num);  
+       }
+       f2();
+    }
+
+    var num = 456;//最外层的
+    f1();//所以最终输出123
+    </script>
+</head>
+<body>
+
+</body>
+</html>

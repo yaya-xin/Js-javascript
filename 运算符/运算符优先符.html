@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先符</title>
+    <script>
+/*优先级      运算符          顺序
+  1           小括号         （）
+  2           一元运算符      ++  -- ！ 一元运算符里面逻辑非优先级很高
+  3           算数运算符      先* / % 后 +  -
+  4           关系运算符      >  >=  <  <=
+  5           相等运算符      ==  !=  ===  !==
+  6           逻辑运算符      先&& 后||
+  7           赋值运算符      =
+  8           逗号运算符      ，
+*/
+ console.log( 4>=6 ||'人'!='阿凡达'&&!(12 * 2 == 144) && true);
+ //逻辑运算符把式子划分成4段
+ // 4>=6    '人'!='阿凡达'       !(12 * 2 == 144)                                    true
+//false      true                先算小括号里面的24和144一样吗。不一样返回fales前面还有个!.最终得true      true(最后一个)
+//&&比||的权重要高，所以先算后面的true&&true&&true 最后得到true
+//前面的false||true  得到false最后
+
+
+
+
+ var num = 10;
+ console.log( 5==num/2 && (2 + 2 *num).toString() === '222');
+ //根据逻辑运算符划分为两大部分  5==num/2  (2 + 2 *num).toString() === '22'
+ //第一部分num/2得5,和前面是数字5相等，所以返回true
+ //第二部分 先看小括号 (2 + 2 *num)得22，再把22转换成字符串。字符型的'22'和'22'全等，最终返回true
+
+ 
+
+ var a = 3 > 5 && 2 < 7 && 3 == 4;
+ console.log(a);
+ //逻辑运算符权重比比较运算符低 所以把式子分成三段3 > 5    2 < 7    3 == 4
+  //分别是 false&&true&&false  前半部分false&&true返回false 所以最后结果是false
+
+ console.log(a);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

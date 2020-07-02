@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环的案例</title>
+    <script>
+      //1.求1-100之间所有数的平均值  需要一个sum和的变量  还需要一个平均值average变量
+    //   var sum = 0;
+    //   var average = 0;
+    //   for(var i = 1; i <= 100; i++){
+    //       sum = sum + i;
+    //   }
+    //   average =sum/100;
+    //   console.log(average);
+      
+      //2.求1-100之间所有偶数和奇数的平均和  需要一个偶数的和变量even  还需要一个奇数odd
+      var even = 0;
+      var odd = 0;
+      for (var i =1; i <= 100 ; i++){
+        if ( i % 2 == 0){
+            even = even + i;
+        } else {
+            odd = odd + i;
+        }
+      }
+      console.log('1~100之间所有的偶数和是' + even);
+      console.log('1~100之间所有的奇数和是' + odd);
+      
+      //3.求1-100之间所有能被3整除的数字的和
+       var result = 0;
+       for (var i = 1; i <= 100; i++){
+           if( i % 3 == 0){
+               result = result + i;
+           }
+       }
+       console.log('1~100之间能够被3整除的数字和是：'+ result);
+       
+
+       //求学生成绩，要求用户输入班级人数，之后一次输入每个学生的成绩，最后答应出该班总的成绩以及平均成绩
+       //1.弹出输入框输入总的班级人数
+       //2.依次输入学生成绩（保存起来score）,此时我们需要用到for循环，弹出的次数跟班级总人数又关系 表达式 i <= num
+
+       var num = prompt('请输入班级的总人数：'); //num是总班级人数
+       var sum = 0 ;//求和的变量
+       var average = 0;//求平均值的变量
+       for(var i = 1; i <= num; i++){
+           var score = prompt('请你输入第'+ i +'i个学生成绩');
+           //因为从prompt取过来的数据是字符串型的需要转换为数字型
+
+           sum = sum + parseFloat(score);
+       }
+    average = sum/num;
+    alert('班级总的成绩是' + sum);
+    alert('班级平均分是:' + average);
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html

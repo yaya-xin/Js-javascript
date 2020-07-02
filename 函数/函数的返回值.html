@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的返回值</title>
+    <script>
+     //有的时候我们会希望将值返回给调用者，此时通过return语句就可以实现
+     /*
+     function 函数名(){
+         return 需要返回的结果
+     }
+     函数名（）;
+
+    1.我们函数执行实现某种功能，最终的结果需要返回给函数的调用者 通过return实现
+    2.只要函数遇到return 就把后面的结果返回给函数调用者 相当于 函数名() = return后面的结果
+    3.代码验证
+     */
+     function getResult(){
+         return 666;
+     }
+
+     getResult();//相当于 gerResult() = 666
+     console.log(getResult());
+     
+    </script>
+</head>
+<body>
+
+</body>
+</html>

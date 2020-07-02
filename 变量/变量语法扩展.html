@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量扩展</title>
+    <script>
+     
+    // 1.更新变量 一个变量被重新赋值后，它原有的值就会被覆盖，变量值将以最后一次赋的值为准
+      var myname='pink老师';
+      console.log(myname);
+      myname = '迪丽热巴';
+      console.log(myname);
+    //2.声明多个变量,只要写一个var 多个变量名之间用英文逗号隔开
+    /*var age = 18;
+    var address = '火影书';
+    var gz = 2000;*/
+    var age = 18,
+        address = '火影节',
+        gz = 2000;
+    
+    //3.声明变量的特殊情况 
+     //3.1只声明不赋值 结果是？undefined 未定义的
+    var sex;
+    console.log(sex);
+    //3.2 没有变量也没有赋值. 会报错
+    console.log(tel);
+    //3.3 不声明直接赋值 可以使用，但是不提倡
+    qq = 110;
+    console.log(qq);
+    </script>
+</head>
+<body>
+
+</body>
+</html

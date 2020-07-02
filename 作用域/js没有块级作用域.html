@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js没有块级作用域</title>
+    <script>
+/*现阶段 js没有块级作用域的概念*/
+//我们js  也是在es6的时候新增的块级作用域
+//块级作用域 {}   if{}   for{}
+
+/*在java里面
+  if(xx) {
+      int num = 10;
+  }
+  外面的是不能调用num的
+
+*/
+  if (3 <5){
+      var num = 10;
+  }
+  console.log(num);//可以输出没问题的
+  
+    </script>
+</head>
+<body>
+
+</body>
+</html>

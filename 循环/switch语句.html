@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch语句</title>
+    <script>
+        /*switch转换，开关  case选项
+          执行思路 利用我们表达式的值 和 case 后面的选项值匹配，如果匹配上就执行该case里面的语句。如果都没有匹配上，你们执行default里面的语句
+
+          注意：1.在开发里面表达式我们经常写成变量
+                2.我们（值）里面的值和case里面的值相匹配的时候是全等的。必须是值和数据类型一致的时候才可以 （值）=== value
+                3.break如果的当前的cass里面没有break 则不会退出switch 是继续执行下一个case
+        */
+      /* switch(表达式){
+          case value1:
+              执行语句1;
+              break;
+          case value2:
+              执行语句2;
+              break;    
+          ...
+          default:
+             执行最后语句;
+      */
+
+      //查询水果案例
+      var fruit = prompt('请你输入查询的水果');
+      switch(fruit){
+          case '苹果':
+                alert('苹果的价格是3.5/kg');
+                break;
+          case '榴莲':
+                alert('榴莲的价格是35/kg');
+                break;
+         default:
+                alert('没有此水果');
+      }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

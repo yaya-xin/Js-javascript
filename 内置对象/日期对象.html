@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date对象</title>
+    <script>
+//Date() 日期对象  是一个构造函数  必须使用new来调用创建文明的日期对象
+
+//1.使用Date 如果没有参数   返回当前系统的当前时间
+   var date = new Date();
+   console.log(date);
+
+//2.参数常用的写法 数字型 2019 10 01 或者是 字符串型 '2019-10-1 8:8:8'
+ var date1 = new Date(2019,10,1);
+ console.log(date1);
+ var date2 = new Date('2019-10-1 8:8:8');
+ console.log(date2);
+ 
+
+ //格式化年月日 
+ var date = new Date();
+ console.log(date.getFullYear());  //返回当前日期的年 2020
+ console.log(date.getMonth() + 1); //getMonth()返回当前月（0-11） 返回的月份比当前月份小一个月
+ console.log(date.getDate()); //返回的是几号 
+ console.log(date.getDay()); //返回周几 周一返回的是1  周六返回的是6 但是周日返回的是0
+ 
+ //我们写一个2020年6月1日 星期三
+ var year = date.getFullYear();
+ var month = date.getMonth() + 1;
+ var dates = date.getDate();
+ var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+ var day = date.getDay();//不想显示星期数字是页面 就弄一个数组 这样才能显示文字
+ console.log('今天是:' + year +'年' + month + '月' + dates + '日 ' + arr[day]);
+ 
+
+
+ //格式化日期 时分秒
+var date = new Date();
+console.log(date.getHours()); //时
+console.log(date.getMinutes()); //分
+console.log(date.getSeconds()); //秒
+
+//要求封装一个函数返回当前的时分秒 格式 08：08:08
+function getTime(){
+    var time = new Date();
+    var h = time.getHours();
+    h = h < 10 ?'0'+ h : h;
+    var m = time.getMinutes();
+    m = m < 10 ? '0' + m :m;
+    var s = time.getSeconds();
+    s = s <10? '0'+ s: s;
+    return h + ':' + m +':'+ s;
+}
+console.log(getTime());
+
+
+
+//获取日期总的毫秒形式（时间戳） 当前时间距离1970年1月1日过了多少毫秒数
+//1.通过valueof()  getTime()
+var date = new Date();
+console.log(date.valueOf()); 
+console.log(date.getTime());
+
+//2.简单的写法(最常用的写法)
+var date1 = +new Date(); //+new Date() 返回的就是总的毫秒数
+console.log(date1);
+
+//3. H5 新增的 获得总的毫秒数
+console.log(Date.now());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html

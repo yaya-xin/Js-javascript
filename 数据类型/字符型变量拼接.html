@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符拼接</title>
+    <script>
+        //1.字符串长度
+        //字符串是由若干字符组成，这些字符的数量就是字符串的长度，通过字符串length属性可以获取整个字符串的长度
+        var str = 'my name is andy';//空格也算字符
+        console.log(str.length);//15
+        
+
+        //2.字符串的拼接
+        //拼接方式字符串+任何类型 = 拼接之后的新字符串
+        console.log('猪猪'+'可爱');
+        console.log('猪猪'+'777');
+        console.log('猪猪'+'true');
+        console.log(12 + 12);//24
+        console.log('12' + 12);//'1212'
+        //+号总口诀：数值相加，字符相连
+
+
+        //加强
+        var age = 3;
+        console.log('猪猪' + age + '岁');
+        
+        //显示年龄小案例。弹出一个输入框让用户输入年龄，把用户输入的值保存起来，用alert弹出结果
+        var age1 = prompt('请输入您的年龄： ');
+        alert('年龄是' + age1 +'岁');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

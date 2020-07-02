@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型的分类</title>
+    <script>
+    /*js中分为
+    简单数据类型（Number,String ,Boolean,Undefined,Null）
+    Number   数字型，包含整形值和浮点型值，如21,  0.21、    默认值是0
+    Boolean  布尔值类型， 如true,false 等价于1和0          默认值是false
+    String   字符串类型，如"张珊"，js里面字符串都带引号     默认值""
+    Undefined var a;什么了变量a但是没有给值，此时的a = undefined   默认值undefined
+    Null      var a = null; 声明了变量a为空值              默认值null
+    复杂数据类型（object）
+    */
+
+    var num = 10; //num 数字型
+    var PI = 3.14; // pI 数字型
+    //数字型里面是有进制的
+    //1.八进制 0~7 在程序里面数字前面加0表示八进制
+    var num1 = 010;
+    console.log(num1);//输出8  010是八进制 转化为10进制就是8
+    var num2 = 012;
+    console.log(num2);//输出10
+    
+
+    //2.十六进制  0~9 a~f  #ffffff  数字的前面0x表示16进制
+    var num3 = 0x9;
+    console.log(num3);
+    
+    //数字型范围
+    //js中数组的最大值和最小值
+    alert(Number.MAX_VALUE);
+    alert(Number.MIN_VALUE);
+    
+    //数字型有三个特殊值
+    //alert(Infinity);//Infinity,表示无穷大，大于任何数值
+    //alert(-Infinity);//Infinity,表示无穷小，小于任何数值
+    //alert(NaN); //代表一个非数值
+    </script>
+</head>
+<body>
+
+</body>
+</html>

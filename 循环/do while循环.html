@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do while循环</title>
+    <script>
+      /*do-while语句其实我while语句的一个变体，该循环会先执行一次代码块，然后对条件表达式进行判断，如果条件为真，就会重复执行循环体，否则退出循环*/
+     /* 
+     1.语法结构
+     do {
+         //循环体
+      } while (条件表达式)
+
+      2.执行思路 跟while不同的地方在于do while先执行一次循环体 在判断条件
+      如果条件表达式结果为真，则继续执行循环体，否则退出循环
+
+      3.代码验证 
+
+      4.do  while循环体至少执行一次
+      */
+    //   var i = 1;
+    //   do {
+    //     console.log('你哈');
+    //     i++;
+        
+    //   }while(i<=100)
+      
+
+      //1.打印人的一生，从1岁到100岁
+      var i = 0;
+      do{
+         console.log('这人今年' + i + '岁了');
+         i++; 
+      }while(i <= 100)
+
+      //2.计算1~100之间所有整数和 
+      var sum = 0;
+      var j = 1;
+      do {
+          sum += j;
+          j++;
+      }while( j <= 100)
+     console.log(sum);
+     
+     //3.弹出一个提示框 ，“你爱我吗” 如果输入我爱你，就提示结束，否则一直询问
+     do{
+         var message = prompt('你爱我吗');
+     } while( message != '我爱你')
+
+     alert('我也爱你啊');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

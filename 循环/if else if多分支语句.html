@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多分支语句</title>
+    <script>
+    //1.多分支语句 就是利用多个条件来选择不同的语句执行 得到不同的结果 多选1的过程
+    //2.if else if语句是多分支语句
+    /*执行思路 如果条件表达式1满足就执行语句1，执行完毕后就退出整个if分支语句
+              如果条件表达式1不满足，则判断条件表达式2，满足的话，执行语句2，满足的话执行语句2，以此类推
+              如果上面的所有条件表达式都不成立，则执行else里面的语句 
+   //注意点
+      1.多分支语句还是多旋翼，最后只能有一个语句执行
+      2.else if里面的条件理论上是可以任意多个的
+      3.else if中间有空格
+
+
+    if（条件表达式1）{
+        语句1
+    }else if(条件表达式2){
+        语句2
+    }else if(条件表达式3){
+        语句3
+    }else{
+        最后的语句
+    }
+    */
+
+    /*案例 判断成绩级别
+     90分含以上 A
+     80分(含)~90分(不含) 输出 B
+     70分(含)~80分(不含) 输出c
+     60分(含)~70分(不含) 输出D
+     60分（不含）以下 输出E
+
+     按照从大到小的判断思路
+    */
+    var score = prompt('请您输入分数：')
+    if(score >= 90){
+        alert('A');
+    } else if( score >= 80){
+        alert('B')
+    } else if( score >= 70){
+        alert('C');
+    } else if(score >= 60){
+        alert('D')
+    } else{
+        alert('E')
+    }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
